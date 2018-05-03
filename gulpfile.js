@@ -103,7 +103,6 @@ gulp.task('fileinclude', function() {
       prefix: '@@',
       basepath: '@file'
     }))
-    .pipe(gulp.dest(path.base + path.productionDir));
 });
 
 /**
@@ -257,7 +256,7 @@ gulp.task('server', function () {
         {
             port: 3000,
             host: "127.0.0.1",
-            root: path.base + path.productionDir,
+            root: path.base + path.productionDir, 
             file: "index.html"
         }
     ); 
