@@ -1,7 +1,7 @@
 {
   "name": "front-end-starter-kit-with-gulp",
   "version": "1.0.0",
-  "description": "",
+  "description": "Front End Fast Starter Kit",
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp"
@@ -27,7 +27,6 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^4.0.1",
     "gulp-uglify": "^3.0.0",
-    "gulp-util": "^3.0.8",
     "gulp-watch": "^5.0.0", 
     "live-server": "^1.2.0",
     "run-sequence": "^2.2.0"

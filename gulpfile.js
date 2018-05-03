@@ -29,7 +29,6 @@ const   gulp            = require('gulp'),
         fileinclude     = require('gulp-file-include'),
 
 /* ========================= Eror Reporting ========================= */
-        gutil           = require('gulp-util'),
         plumber         = require('gulp-plumber'),
 
 /* ========================= Compaile & Server ========================= */
@@ -50,20 +49,6 @@ const   gulp            = require('gulp'),
             developmentDir: 'resources',
             productionDir: ThemeName.charAt(0).toUpperCase() + ThemeName.slice(1) + ' HTML'
         };
-
-/**
-* Catch stream errors
-* -----------------------------------------------------------------------------
-*/
-
-function errorReporting() {
-    //Catch errors
-    return plumber(function onError(error) {
-            gutil.log(gutil.colors.bgRed("Error (" + error.plugin + "):" + error.message));
-            this.emit('end');
-        }
-    );
-}
 
 /**
  * Delete the productionDir directory
