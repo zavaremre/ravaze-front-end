@@ -1,0 +1,57 @@
+@@include('./lib/modals/register-modal.html')
+@@include('./lib/modals/login-modal.html')
+    <!--Header Start-->
+    <header class="header sticky-top navbar-dark bg-primary mb-3">
+        <nav class="container navbar navbar-light navbar-expand-md p-3">
+            <!--Logo start-->
+            <a href="/index.html" class="navbar-brand justify-content-between">
+                <img src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top"
+                    alt="">
+                <span class="d-inline-block">
+                    LOGO
+                </span>
+            </a>
+            <!--Logo end-->
+            <!--Mobile menu toggle start-->
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#mobile_toggle" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--Mobile menu toggle end-->
+            <!--Navbar menu start-->
+            <div class="navbar-collapse collapse" id="mobile_toggle">
+                <ul class="navbar-nav justify-content-center w-100">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Category</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Author</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                <!--Right navbar menu start-->
+                <ul class="nav navbar-nav justify-content-between">
+                    <div class="d-flex">
+                        <a class="btn btn-success text-white w-100 mr-3" href="#!"  data-toggle="modal" data-target="#registermodal">Register Site</a>
+                        <a class="btn btn-warning w-100" href="#!" data-toggle="modal" data-target="#loginmodal">Login Site </a>
+                    </div>
+                </ul>
+                <!--Right navbar menu end-->
+            </div>
+            <!--Navbar menu end-->
+        </nav>
+    </header>
+    <!--Header End-->
