@@ -49,6 +49,7 @@ const   gulp            = require('gulp'),
             developmentDir: 'resources',
             productionDir: ThemeName.charAt(0).toUpperCase() + ThemeName.slice(1) + ' HTML'
         };
+ 
 
 /**
  * Delete the productionDir directory
@@ -70,8 +71,6 @@ gulp.task('clean', function () {
 gulp.task('html', function () {
     //Select files
     return gulp.src(path.developmentDir + '/html/**/*')
-    //Error Reporting
-    .pipe(errorReporting())
     //Save files
     .pipe(gulp.dest(path.base + path.productionDir));
 });
@@ -99,8 +98,6 @@ gulp.task('fileinclude', function() {
 gulp.task('sass', function () {
     //Select files
     return gulp.src(path.developmentDir + '/sass/*.scss')
-    //Error Reporting
-    .pipe(errorReporting())
     //Compile Sass
     .pipe(sass(
         {
@@ -135,8 +132,6 @@ gulp.task('sass', function () {
 gulp.task('plugins', function () {
     //Select files
     return gulp.src(path.developmentDir + '/sass/plugins/*.scss')
-    //Error Reporting
-    .pipe(errorReporting())
     //Compile Sass
     .pipe(sass(
         {
@@ -174,8 +169,6 @@ gulp.task('plugins', function () {
 gulp.task('js', function () {
     //Select files
     return gulp.src(path.developmentDir + '/babel/*.js')
-    //Error Reporting
-    .pipe(errorReporting())
     //Concatenate includes
     .pipe(include())
     //Transpile
@@ -206,8 +199,6 @@ gulp.task('js', function () {
 gulp.task('images', function () {
     //Select files
     return gulp.src(demo ? path.developmentDir + '/images/sample/**/*' : path.developmentDir + '/images/prod/**/*')
-    //Error Reporting
-    .pipe(errorReporting())
     //ImageMin
     .pipe(imagemin())
     //Save files
@@ -222,8 +213,6 @@ gulp.task('images', function () {
 gulp.task('vendors', function () {
     //Select files
     return gulp.src(path.developmentDir + '/vendors/**/*')
-    //Error Reporting
-    .pipe(errorReporting())
     //Save files
     .pipe(gulp.dest(path.base + path.productionDir + '/assets/vendors'));
 });
