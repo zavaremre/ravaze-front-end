@@ -241,7 +241,7 @@ gulp.task('server', function () {
     gulp.watch(path.developmentDir + '/html/**',['fileinclude']);   
     gulp.watch(path.developmentDir + '/node_modules/font-awesome/fonts/*',['fonts']);   
     gulp.watch(path.developmentDir + '/sass/**/*.scss',['sass']);
-    gulp.watch(path.developmentDir + '/sass/include/*.scss',['plugins']);
+    gulp.watch(path.developmentDir + '/sass/include/*.scss',['include']);
     gulp.watch(path.developmentDir + '/babel/**/*.js',['js']);    
     gulp.watch(path.developmentDir + '/images/**/*',['images']);    
     gulp.watch(path.developmentDir + '/vendors/**/*',['vendors']);     
