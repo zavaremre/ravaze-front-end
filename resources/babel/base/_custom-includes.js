@@ -51,7 +51,7 @@ $('[data-fancybox="gallery"]').fancybox({
   fullScreen: {
     autoStart: false
   },
-  transitionEffect: "fade",
+  transitionEffect: "zoom-in-out",
   // Enable infinite gallery navigation
   loop: false,
 
@@ -82,10 +82,10 @@ $('[data-fancybox="gallery"]').fancybox({
   // and they will be placed into toolbar (class="fancybox-toolbar"` element)
   buttons: [
     "zoom",
-    //"share",
-    //"slideShow",
-    //"fullScreen",
-    //"download",
+    "share",
+    "slideShow",
+    "fullScreen",
+    "download",
     "thumbs",
     "close"
   ],
