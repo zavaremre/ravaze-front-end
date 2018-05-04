@@ -129,9 +129,9 @@ gulp.task('sass', function () {
  * -----------------------------------------------------------------------------
  */
 
-gulp.task('plugins', function () {
+gulp.task('include', function () {
     //Select files
-    return gulp.src(path.developmentDir + '/sass/plugins/*.scss')
+    return gulp.src(path.developmentDir + '/sass/include/*.scss')
     //Compile Sass
     .pipe(sass(
         {
@@ -241,7 +241,7 @@ gulp.task('server', function () {
     gulp.watch(path.developmentDir + '/html/**',['fileinclude']);   
     gulp.watch(path.developmentDir + '/node_modules/font-awesome/fonts/*',['fonts']);   
     gulp.watch(path.developmentDir + '/sass/**/*.scss',['sass']);
-    gulp.watch(path.developmentDir + '/sass/plugins/*.scss',['plugins']);
+    gulp.watch(path.developmentDir + '/sass/include/*.scss',['plugins']);
     gulp.watch(path.developmentDir + '/babel/**/*.js',['js']);    
     gulp.watch(path.developmentDir + '/images/**/*',['images']);    
     gulp.watch(path.developmentDir + '/vendors/**/*',['vendors']);     
@@ -254,5 +254,5 @@ gulp.task('server', function () {
  */
 
 gulp.task('default', function (callback) {
-    return sequence(['clean'],['html'],['fileinclude'],['fonts'],['sass'],['plugins'],['js'], ['images'], ['vendors'], ['server'], callback);
+    return sequence(['clean'],['html'],['fileinclude'],['fonts'],['sass'],['include'],['js'], ['images'], ['vendors'], ['server'], callback);
 });

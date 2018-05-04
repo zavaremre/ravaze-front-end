@@ -27,11 +27,12 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^4.0.1",
     "gulp-uglify": "^3.0.0",
-    "gulp-watch": "^5.0.0", 
+    "gulp-watch": "^5.0.0",
     "live-server": "^1.2.0",
     "run-sequence": "^2.2.0"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.3.5",
     "bootstrap": "^4.1.0",
     "owl.carousel": "^2.3.4"
   }

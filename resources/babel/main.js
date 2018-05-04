@@ -17,6 +17,7 @@
 /* =============== Include Plugins =============== */
 //=require ../../node_modules/bootstrap/dist/js/bootstrap.js 
  //=require ../../node_modules/owl.carousel/dist/owl.carousel.js
+ //=require ../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js
 /* =============== Include Plugins =============== */  
 
 /* =============== Custom Include Js =============== */
