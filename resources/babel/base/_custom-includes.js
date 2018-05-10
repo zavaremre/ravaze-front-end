@@ -29,6 +29,7 @@ $('.carousel-main').owlCarousel({
 //owl-carousel end
 //fancy box 3 start
 $('[data-fancybox="gallery"]').fancybox({
+  hash:false,
   // Open/close animation type
   // Possible values:
   //   false            - disable
@@ -51,7 +52,7 @@ $('[data-fancybox="gallery"]').fancybox({
   fullScreen: {
     autoStart: false
   },
-  transitionEffect: "fade",
+  transitionEffect: "zoom-in-out",
   // Enable infinite gallery navigation
   loop: false,
 
@@ -82,10 +83,10 @@ $('[data-fancybox="gallery"]').fancybox({
   // and they will be placed into toolbar (class="fancybox-toolbar"` element)
   buttons: [
     "zoom",
-    //"share",
-    //"slideShow",
-    //"fullScreen",
-    //"download",
+    "share",
+    "slideShow",
+    "fullScreen",
+    "download",
     "thumbs",
     "close"
   ],
@@ -104,7 +105,7 @@ $('[data-fancybox="gallery"]').fancybox({
     //   true  - wait for image to load and then display;
     //   false - display thumbnail and load the full-sized image over top,
     //           requires predefined image dimensions (`data-width` and `data-height` attributes)
-    preload: false
+    preload: true,
   },
 
 });

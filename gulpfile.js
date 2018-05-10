@@ -19,6 +19,7 @@ const   gulp            = require('gulp'),
 /* ========================= Babel ========================= */
         babel           = require('gulp-babel'),
         uglify          = require('gulp-uglify'),
+         neat           = require('node-neat');
 
 /* ========================= Image ========================= */
         imagemin        = require('gulp-imagemin'),
@@ -97,7 +98,7 @@ gulp.task('fileinclude', function() {
 
 gulp.task('sass', function () {
     //Select files
-    return gulp.src(path.developmentDir + '/sass/*.scss')
+    return gulp.src(path.developmentDir + '/sass/**/*.scss')
     //Compile Sass
     .pipe(sass(
         {
@@ -131,10 +132,11 @@ gulp.task('sass', function () {
 
 gulp.task('include', function () {
     //Select files
-    return gulp.src(path.developmentDir + '/sass/include/*.scss')
+    return gulp.src(path.developmentDir + '/include/include.scss')
     //Compile Sass
     .pipe(sass(
         {
+ 
             outputStyle: 'expanded'
   
         } 
@@ -160,7 +162,6 @@ gulp.task('include', function () {
     .pipe(gulp.dest(path.base + path.productionDir + '/assets/css/min'));
 });
  
-
 /**
  * Build scripts with ES6/Babel
  * -----------------------------------------------------------------------------
@@ -241,7 +242,7 @@ gulp.task('server', function () {
     gulp.watch(path.developmentDir + '/html/**',['fileinclude']);   
     gulp.watch(path.developmentDir + '/node_modules/font-awesome/fonts/*',['fonts']);   
     gulp.watch(path.developmentDir + '/sass/**/*.scss',['sass']);
-    gulp.watch(path.developmentDir + '/sass/include/*.scss',['plugins']);
+    gulp.watch(path.developmentDir + '/include/include.scss',['include']);
     gulp.watch(path.developmentDir + '/babel/**/*.js',['js']);    
     gulp.watch(path.developmentDir + '/images/**/*',['images']);    
     gulp.watch(path.developmentDir + '/vendors/**/*',['vendors']);     
