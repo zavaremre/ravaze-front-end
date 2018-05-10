@@ -9,6 +9,7 @@
   "author": "Emre ZAVAR",
   "license": "MIT",
   "devDependencies": {
+    "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.6.1",
     "del": "^3.0.0",

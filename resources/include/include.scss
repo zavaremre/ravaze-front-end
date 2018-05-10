@@ -297,9 +297,13 @@
     'vine'                    :                    $vine-color,  
     'steam'                   :                    $steam-color,  
     'discord'                 :                    $discord-color, 
- 
+  
   ), $theme-colors);
 /*Css Colors Variables End*/
+ 
+
+
+
 // stylelint-disable selector-no-qualifying-type
  
 $enable-rounded               :                    false;
@@ -486,4 +490,10 @@ $modal-transition:                  transform .3s ease-out;
 @import         "node_modules/owl.carousel/src/scss/owl.carousel.scss"; 
 @import         "node_modules/owl.carousel/src/scss/owl.theme.default.scss";
 @import         "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css";
-@import         "node_modules/@fortawesome/font-awesome/styles.css"; 
+ 
+@import         "node_modules/@fortawesome/fontawesome-free-webfonts/scss/fontawesome"; 
+
+
+// Variables
+// -------------------------- 
+ 
